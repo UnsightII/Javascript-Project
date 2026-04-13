@@ -81,12 +81,19 @@ function moveSnake(){
   }
 };
 function drawSnake(){
-  ctx.fillStyle = snakeColor;
-  ctx.strokeStyle = snakeBorder;
-  snake.forEach(snakePart => {
-    ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
-    ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
-  })
+  snake.forEach((snakePart,index) => {
+    if(index === 0){
+      //head color
+      ctx.fillStyle = "darkgreen";
+      ctx.strokeStyle = "darkred";
+    }else{
+      ctx.fillStyle = snakeColor;
+      ctx.strokeStyle = snakeBorder;
+    }
+      ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+      ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
+
+  });
 };
 function changeDirection(event){
   const keyPressed = event.keyCode;
