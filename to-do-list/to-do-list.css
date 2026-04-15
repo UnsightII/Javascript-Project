@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+}
+
+/* Card container */
+form {
+  width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Input row */
+.label-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 8px;
+}
+
+/* Task list */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each task */
+.divTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+/*button*/
+button{
+  background-color:lightgreen;
+  width :50px;
+  height:50px;
+  cursor:pointer;
+  border:none;
+}
+
+.del-btn{
+  background-color:#FF7F50;
+}
