@@ -44,7 +44,7 @@ function renderTasks() {
     // DELETE task
     delBtn.addEventListener('click', () => {
       tasks.splice(index, 1);   // remove from array
-      saveStorage(tasks);       // save updated array
+      saveStorage(task);       // save updated array
       renderTasks();            // re-render UI
     });
   });
