@@ -1,6 +1,8 @@
-const input = document.querySelector('.input');
-const btn = document.querySelector('.btn');
 const container = document.querySelector('.task-container');
+const btn = document.querySelector('.btn');
+const input = document.querySelector('.input');
+
+
 
 let tasks = [];
 
@@ -44,7 +46,7 @@ function renderTasks() {
     // DELETE task
     delBtn.addEventListener('click', () => {
       tasks.splice(index, 1);   // remove from array
-      saveStorage(task);       // save updated array
+      saveStorage(tasks);       // save updated array
       renderTasks();            // re-render UI
     });
   });
@@ -52,11 +54,11 @@ function renderTasks() {
 
 // GET from storage
 function getStorage() {
-  const data = localStorage.getItem('tasks');
-  return data ? JSON.parse(data) : [];
+  let data = localStorage.getItem('tasks');
+  return data ? JSON.parse(data):[];
 }
 
 // SAVE to storage
 function saveStorage(tasks) {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem('tasks',JSON.stringify(tasks));
 }
